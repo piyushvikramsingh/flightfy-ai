@@ -1,16 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { UserActions } from "./UserActions";
 import { 
   Plane, 
   Building2, 
   Bus, 
   Train, 
   Car, 
-  Package, 
-  Menu,
-  User,
-  Search,
-  Bell
+  Package
 } from "lucide-react";
 
 export const Header = () => {
@@ -63,27 +60,7 @@ export const Header = () => {
           </nav>
 
           {/* User Actions */}
-          <div className="flex items-center space-x-3">
-            <Button variant="ghost" size="icon" className="relative">
-              <Bell className="h-5 w-5" />
-              <Badge 
-                variant="destructive" 
-                className="absolute -top-1 -right-1 h-4 w-4 p-0 text-xs flex items-center justify-center"
-              >
-                3
-              </Badge>
-            </Button>
-            <Button variant="outline" size="sm" className="gap-2">
-              <User className="h-4 w-4" />
-              Sign In
-            </Button>
-            <Button size="sm" className="hidden sm:flex">
-              Sign Up
-            </Button>
-            <Button variant="ghost" size="icon" className="md:hidden">
-              <Menu className="h-5 w-5" />
-            </Button>
-          </div>
+          <UserActions />
         </div>
       </div>
     </header>
