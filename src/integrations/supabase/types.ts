@@ -14,7 +14,153 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      api_configurations: {
+        Row: {
+          api_key: string | null
+          api_name: string
+          api_secret: string | null
+          api_type: string
+          base_url: string | null
+          configuration: Json | null
+          created_at: string
+          created_by: string | null
+          id: string
+          is_active: boolean
+          updated_at: string
+        }
+        Insert: {
+          api_key?: string | null
+          api_name: string
+          api_secret?: string | null
+          api_type: string
+          base_url?: string | null
+          configuration?: Json | null
+          created_at?: string
+          created_by?: string | null
+          id?: string
+          is_active?: boolean
+          updated_at?: string
+        }
+        Update: {
+          api_key?: string | null
+          api_name?: string
+          api_secret?: string | null
+          api_type?: string
+          base_url?: string | null
+          configuration?: Json | null
+          created_at?: string
+          created_by?: string | null
+          id?: string
+          is_active?: boolean
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      hotel_properties: {
+        Row: {
+          address: string
+          amenities: string[] | null
+          city: string
+          country: string
+          created_at: string
+          description: string | null
+          email: string | null
+          hotel_name: string
+          id: string
+          images: string[] | null
+          is_active: boolean
+          is_verified: boolean
+          owner_id: string | null
+          phone: string | null
+          pincode: string | null
+          pricing: Json | null
+          room_types: Json | null
+          star_rating: number | null
+          state: string
+          updated_at: string
+          website: string | null
+        }
+        Insert: {
+          address: string
+          amenities?: string[] | null
+          city: string
+          country?: string
+          created_at?: string
+          description?: string | null
+          email?: string | null
+          hotel_name: string
+          id?: string
+          images?: string[] | null
+          is_active?: boolean
+          is_verified?: boolean
+          owner_id?: string | null
+          phone?: string | null
+          pincode?: string | null
+          pricing?: Json | null
+          room_types?: Json | null
+          star_rating?: number | null
+          state: string
+          updated_at?: string
+          website?: string | null
+        }
+        Update: {
+          address?: string
+          amenities?: string[] | null
+          city?: string
+          country?: string
+          created_at?: string
+          description?: string | null
+          email?: string | null
+          hotel_name?: string
+          id?: string
+          images?: string[] | null
+          is_active?: boolean
+          is_verified?: boolean
+          owner_id?: string | null
+          phone?: string | null
+          pincode?: string | null
+          pricing?: Json | null
+          room_types?: Json | null
+          star_rating?: number | null
+          state?: string
+          updated_at?: string
+          website?: string | null
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          email: string
+          full_name: string | null
+          id: string
+          phone: string | null
+          role: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          full_name?: string | null
+          id?: string
+          phone?: string | null
+          role?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          full_name?: string | null
+          id?: string
+          phone?: string | null
+          role?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
